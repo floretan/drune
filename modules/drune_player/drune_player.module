@@ -1,0 +1,33 @@
+<?php
+
+include_once('drune_player.features.inc');
+
+/**
+ * Implements hook_block_info().
+ */
+function drune_player_block_info() {
+  return array(
+    'drune_player' => array(
+      'info' => t('Drune Player'),
+      'region' => 'content',
+    ),
+  );
+}
+
+/**
+ * Implements hook_block_view().
+ */
+function drune_player_block_view($delta = '') {
+  if ($delta == 'drune_player') {
+    $block['subject'] = '';
+    $block['content'] = array(
+      '#theme' => 'jplayer',
+      '#mode' => 'playlist',
+      '#items' => array(),
+      '#player_id' => 'drune-player-block',
+      '#attached' => jplayer_add(FALSE),
+    );
+
+    return $block;
+  }
+}

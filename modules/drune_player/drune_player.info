@@ -1,0 +1,8 @@
+core = "7.x"
+dependencies[] = "views"
+dependencies[] = "jplayer"
+description = "Provide a basic player with a library of audio content."
+features[views][] = "music_library"
+features[views_api][] = "api:3.0-alpha1"
+name = "Drune Player"
+package = "Features"
