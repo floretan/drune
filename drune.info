@@ -1,0 +1,10 @@
+; $Id$
+name = Drune
+description = A web-based music player built on top of Drupal.
+core = 7.x
+dependencies[] = dblog
+dependencies[] = features
+dependencies[] = drune_track
+dependencies[] = drune_player
+files[] = drune.profile
+
